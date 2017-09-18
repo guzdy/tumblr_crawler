@@ -12,7 +12,7 @@ Tumblr_Crawler
 
 ```shell
 $ git clone git@github.com:guzdy/lofter_crawler.git
-$ cd lofter-crawler
+$ cd tumblr-crawler
 $ pip install -r requirements.txt
 ```
 
@@ -50,7 +50,7 @@ BLOGNAME = zenglinghua329 karolina-dean
 更直接的方式是，直接用命令行。
 
 ```shell
-$ python lofter_crawler.py -b blogname1 [-b blogname2]
+$ python lofter_crawler.py blogname1 [blogname2, blogname3 ...]
 ```
 
 每个博客名下， 需加入 "-b" 参数。
@@ -73,4 +73,5 @@ $ python lofter_crawler.py -b blogname1 [-b blogname2]
 
 ### 美女结尾
 ![福利](fl.jpg)
+
 ####### image from [zenglinghua329](http://zenglinghua329.tumblr.com/)

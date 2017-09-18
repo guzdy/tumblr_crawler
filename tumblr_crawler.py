@@ -1,7 +1,7 @@
 # !/usr/bin/env python3
 # -×- coding: utf-8 -*-
 
-import argparse
+import sys
 import configparser
 import shlex
 
@@ -33,13 +33,8 @@ if __name__ == "__main__":
         PROXIES = None
     print(PROXIES)
 
-    arg_parser = argparse.ArgumentParser(description="This is a "
-                                                     "tumblr crawler program.")
-    arg_parser.add_argument('-b', '--blogname', action="append",
-                            help="Specifies the name(s) of the blog to be crawled")
-    args = arg_parser.parse_args()
-    if args.blogname:
-        blognames = args.blogname
+    if len(sys.argv) > 1:
+        blognames = sys.argv[1:]
     if blognames:
         for blogname in blognames:
             print('尝试下载博客内容，请稍后： %s' % blogname)
